@@ -79,7 +79,7 @@ header{
     transform: scale(1.09);
 }
 .barradeinicio-contactos li{
-    transition: 0.5s;
+    transition: 0.1s;
 }
 .barradeinicio-contactos li:hover{
     transform: scale(1.1);
@@ -391,6 +391,13 @@ footer{
         "dibujo6"
         "dibujo1"
         "dibujo4"
+    }
+    
+    .barradeinicio-opciones{
+        flex-direction: column;
+    }
+    .barradeinicio-opciones li{
+        width: 100%;
     }
 
 
