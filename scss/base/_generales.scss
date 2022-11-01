@@ -1,0 +1,23 @@
+*{
+    padding: 0.5%;
+    margin: 0.5% ;
+    box-sizing: border-box;
+}
+
+/*-------DONATE--------*/
+.donate{
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+}
+/*MAIN*/
+
+main{
+    background-image: url("../img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*FIN-MAIN*/

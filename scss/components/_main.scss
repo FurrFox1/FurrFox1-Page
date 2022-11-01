@@ -1,0 +1,257 @@
+@import "../base/media";
+/*INDEX*/
+main{
+    h2{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    section{
+        .infografia-quiensoy{
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            border-color: black;
+            background-color: rgba(255, 255, 255, 0.356);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            @include media-up(lg){
+                flex-direction: column;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+            }
+            div{
+                margin: 5px;
+                text-align: center;
+                border: 5px solid;
+                border-color: rgba(0, 0, 0, 0.651);
+                p{
+                    font-size: 30px;
+                }
+            }
+        }
+        .infografia-datosdemi{
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            border-color: black;
+            background-color: rgba(255, 255, 255, 0.356);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            @include media-up(lg){
+                flex-direction: column;
+            }
+            img{
+                width: 300px;
+                height: 400px;
+            }
+            div{
+                margin: 5px;
+                text-align: center;
+                border: 5px solid;
+                border-color: rgba(0, 0, 0, 0.651);
+                p{
+                    font-size: 25px;
+                }
+            }
+        }
+
+    }
+}
+/*FIN-INDEX*/
+
+/*COMMISSION-LIST*/
+main{
+    .commissions{
+        section{
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: rgb(15, 38, 102);
+                background-color: rgba(0, 0, 0, 0.493);
+                border-radius: 20px;
+            }
+            div{
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                border-radius: 10px;
+                @include media-up(lg){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                p{
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    background-color: rgba(0, 0, 0, 0.493);
+                    border-radius: 10px;
+                }
+                div{
+                    border-radius: 10px;
+                    background-color: rgba(255, 255, 255, 0.685);
+                }
+            }
+        }
+        .commissions-headshot{
+            padding: 10px;
+            background-color: rgba(51, 146, 184, 0.514);
+            border-radius: 10px;
+            .commissions-headshot-target{
+                display: flex;
+                justify-content: center;
+            }
+            div{
+                div{
+                    img{
+                        height: 250px;
+                        width: 250px;
+                        border-radius: 15px;
+                    }
+                }
+            }
+        }
+        .commissions-halfbody {
+            border-radius: 10px;
+            background-color: rgba(139, 181, 201, 0.603);
+            .commissions-halfbody-target{
+                display: flex;
+                justify-content: center;
+                div{
+                    img{
+                        height: 320px;
+                        width: 250px;
+                        border-radius: 15px; 
+                    }
+                }
+            }
+            
+        
+        }
+        .commissions-fullbody{
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.288);
+            .commissions-fullbody-target{
+                display: flex;
+                justify-content: center;
+                div{
+                    img{
+                        height: 400px;
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .commissions p{
+        font-weight: 100;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    section{
+        .title{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+            padding: 20px;
+        }
+    }    
+}
+
+/*FIN-COMMISSION-LIST*/
+
+
+/*EXAMPLES*/
+.ejemplos{
+    border: 1px black solid;
+    .ejemplos_contenedor{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) ;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-areas: 
+        "dibujo1 dibujo2 dibujo3 dibujo4"
+        "dibujo1 dibujo5 dibujo6 dibujo4";
+        @include media-up(lg){
+            grid-template-columns: repeat(2, 1fr) ;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            "dibujo2 dibujo3"
+            "dibujo5 dibujo6"
+            "dibujo1 dibujo4"
+            "dibujo1 dibujo4"
+        }
+        @include media-up(sm){
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-areas:
+            "dibujo2"
+            "dibujo3"
+            "dibujo5"
+            "dibujo6"
+            "dibujo1"
+            "dibujo4"
+            }
+        }
+    }
+    .ejemplos_contenedor{
+        .dibujo1{
+            grid-area: dibujo1;
+        }
+        .dibujo2{
+            grid-area: dibujo2;
+        }
+        .dibujo3{
+            grid-area: dibujo3;
+        }
+        .dibujo4{
+            grid-area: dibujo4;
+        }
+        .dibujo5{
+            grid-area: dibujo5;
+        }
+        .dibujo6{
+            grid-area: dibujo6;
+        }
+    }
+    .ejemplos_contenedor{
+        div{
+            .dibujo{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+
+/*FIN-EXAMPLES*/
+
+/*TAS&FAQ*/
+.tasfaq{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(0, 255, 255, 0.13);
+    border-radius:10px ;
+    margin: auto;
+    text-align: center;
+    div{
+        background-color: rgba(255, 255, 255, 0.199);
+        border-radius: 15px;
+        display: inline-block;
+        
+    }
+    .tasfaq-iwilldraw{
+        h2{
+            color: rgb(23, 255, 23);
+        }
+    } 
+    .tasfaq-iwontdraw{
+        h2{
+            color: red;
+        }
+    } 
+}
+
+/*FIN-TAS&FAQ*/
+
+

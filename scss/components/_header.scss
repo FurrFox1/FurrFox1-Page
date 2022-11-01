@@ -1,0 +1,79 @@
+@import "../base/media";
+@import "../base/variables";
+/*HEADER*/
+header{
+    background-color: $color_principal;
+    .titulo {
+        text-align: center;
+        font-size: 25px;
+        background-color: $color_fondoh1;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .logo{
+        img{
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            width: 150px;
+            height: 150px;
+            border: $color_bordelogo solid;
+            border-radius: 50%;
+            margin: auto;
+            display: block;
+        }
+    }
+    .barradeinicio{
+        ul{
+            li{
+                a{
+                    img{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+        .barradeinicio-opciones{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            background-color: $color_fondobarradeopciones;
+            display: flex;
+            justify-content: center;
+            @include media-up(sm){
+                flex-direction: column;
+            }
+            li{
+                width: 25%;
+                list-style-type: none;
+                color: antiquewhite;
+                background-color: $color_fondomenusbarradeopciones;
+                transition: transform 0.5s;
+                @include media-up(sm){
+                    width: 100%;
+                }
+                &:hover{
+                    transform: scale(1.09);
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    text-align: center;
+                    color: aliceblue;
+                }
+            }
+        }
+        .barradeinicio-contactos{
+            background-color: $color_contactos;
+            display: flex;
+            justify-content: center;
+            li {
+                list-style-type: none;
+                transition: 0.1s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+/*FIN-HEADER*/

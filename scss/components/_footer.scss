@@ -1,0 +1,48 @@
+/*FOOTER*/
+
+footer{
+    background-color: $color_principal;
+    display: flex;
+    justify-content: space-around;
+    .contactos{
+        background-color: $color_secundario_footer;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        .contacto_logo{
+            width: 150px;
+            padding: 20px;
+        }
+        ul{
+            list-style-type: none;
+            display:flex;
+            justify-content: center;
+            text-decoration: none;
+            li{
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .recorrido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_secundario_footer;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        ul{
+            align-items: center;
+            list-style: none;
+            li{
+                width: 100%;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/*FIN-FOOTER*/
